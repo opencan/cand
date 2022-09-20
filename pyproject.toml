@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "opencan-cand"
+version = "0.0.3"
+description = "A fast and super useful daemon for decoding and encoding CAN messages."
+
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = ["cand", "can", "canbus", "can bus"]
+license = {file = "LICENSE.md"}
+
+dependencies = [
+    "redis >= 4.3.2",
+]
+
