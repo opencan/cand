@@ -7,14 +7,14 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="cand",
+    name="opencan-cand",
     version="0.0.3",
-    author="Cooper IGVC",
-    author_email="igvc@cooper.edu",
+    author="OpenCAN",
+    author_email="info@opencan.org",
     description="CAN Service Daemon",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/CooperUnion/selfdrive/tree/master/common/cand",
+    url="https://github.com/opencan/cand",
     packages=["cand"],
     install_requires=[
         "cantools>=37.0.7",
