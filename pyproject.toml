@@ -16,6 +16,12 @@ keywords = ["cand", "can", "canbus", "can bus"]
 license = {text = "GPLv3"}
 
 dependencies = [
-    "redis >= 4.3.2",
+    "cantools>=37.0.7",
+    "coloredlogs>=15.0.1",
+    "msgpack>=1.0.3",
+    "python-can>=3.3.4",
+    "redis>=4.3.2",
 ]
 
+[project.urls]
+"Homepage" = "https://github.com/opencan/cand"
