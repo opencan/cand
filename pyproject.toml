@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "opencan-cand"
-version = "0.0.5"
+version = "0.0.6"
 description = "A fast and super useful daemon for decoding and encoding CAN messages."
 authors = [
     {name = "OpenCAN", email = "info@opencan.org"},
