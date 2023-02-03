@@ -34,13 +34,13 @@ def talker():
             p.execute()
             time_at_flush = time()
 
-        [_, serial_msgs] = cfg.rdb.blmpop(
+        _, serial_msgs = cfg.rdb.blmpop(
             QUEUE_POP_TIMEOUT,
             1,
             "queue:cansend",
             direction="LEFT",
             count=MAX_BUFFER_SIZE + 1,
-        )
+        ) or None, None
 
         if serial_msgs is None:
             continue
