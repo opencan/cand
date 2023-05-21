@@ -20,7 +20,7 @@ dependencies = [
     "coloredlogs>=15.0.1",
     "msgpack>=1.0.3",
     "python-can>=3.3.4",
-    "redis>=4.3.2",
+    "redis>=4.5.5",
 ]
 
 [project.urls]
