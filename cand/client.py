@@ -57,6 +57,18 @@ class Bus:
         if data is not None:
             return time_ns() - data[0]
 
+    def get_message_id(self, name: str) -> int:
+        try:
+            id = self._rdb.get(f"msginfo:{name}:id")
+            if id is None:
+                self._log.debug(f"Tried to get message id for '{name}' and it was unavailable")
+                return None
+
+            return int(id)
+        except Exception as e:
+            self._log.error(f"Error getting message id for {name}: {e}")
+            raise e
+
     def send(self, name: str, data: dict) -> None:
         try:
             data = serialize((name, data))

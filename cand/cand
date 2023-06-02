@@ -136,6 +136,10 @@ def main():
     if not args.no_flush:
         _rdb.flushdb()
 
+    log.info("Populating message metadata.")
+    for msg in _dbc.messages:
+        cfg.rdb.set(f"msginfo:{msg.name}:id", msg.frame_id)
+
     # Start processes
     listen_p = mp.Process(target=listener_process)
     talk_p = mp.Process(target=talker_process)
